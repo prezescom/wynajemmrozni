@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { trackOutboundClick, trackContactClick, trackEvent } from '@/lib/analytics';
+import { Truck, Snowflake, FileText, Zap, Shield, Settings, Clock, CheckCircle } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -29,50 +30,54 @@ export default function Home() {
           </a>
           
           <div className="features-grid grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12">
-            <div className="feature text-center">
-              <span className="emoji text-3xl mb-2 block" aria-hidden="true">🚚</span>
-              <span className="text-sm md:text-base">Szybka dostępność</span>
+            <div className="feature glass-effect p-4 rounded-xl">
+              <Truck className="feature-icon mx-auto floating-element" />
+              <span className="text-sm md:text-base font-medium">Szybka dostępność</span>
             </div>
-            <div className="feature text-center">
-              <span className="emoji text-3xl mb-2 block" aria-hidden="true">❄️</span>
-              <span className="text-sm md:text-base">Zakres –20°C do +20°C</span>
+            <div className="feature glass-effect p-4 rounded-xl">
+              <Snowflake className="feature-icon mx-auto floating-element" style={{ animationDelay: '1s' }} />
+              <span className="text-sm md:text-base font-medium">Zakres –20°C do +20°C</span>
             </div>
-            <div className="feature text-center">
-              <span className="emoji text-3xl mb-2 block" aria-hidden="true">🧾</span>
-              <span className="text-sm md:text-base">Rejestrator temperatur</span>
+            <div className="feature glass-effect p-4 rounded-xl">
+              <FileText className="feature-icon mx-auto floating-element" style={{ animationDelay: '2s' }} />
+              <span className="text-sm md:text-base font-medium">Rejestrator temperatur</span>
             </div>
-            <div className="feature text-center">
-              <span className="emoji text-3xl mb-2 block" aria-hidden="true">🔌</span>
-              <span className="text-sm md:text-base">Zasilanie 230V (postojowe)</span>
+            <div className="feature glass-effect p-4 rounded-xl">
+              <Zap className="feature-icon mx-auto floating-element" style={{ animationDelay: '3s' }} />
+              <span className="text-sm md:text-base font-medium">Zasilanie 230V (postojowe)</span>
             </div>
           </div>
         </div>
       </header>
 
       <main>
-        <section className="why-us py-16 lg:py-20">
+        <section className="why-us py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-blue-50/30">
           <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-center text-slate-900">
-              Dlaczego my
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-center">
+              <span className="gradient-text">Dlaczego my</span>
             </h2>
             <p className="section-lead text-lg md:text-xl text-center mb-12 max-w-3xl mx-auto text-slate-600">
               Profesjonalne rozwiązania transportowe z gwarancją najwyższej jakości obsługi.
             </p>
             
             <div className="benefits-grid grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              <div className="benefit bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="benefit p-6 rounded-xl">
+                <Snowflake className="w-10 h-10 mb-4 text-blue-500" />
                 <h3 className="font-semibold text-lg mb-3 text-slate-900">Stabilna temperatura</h3>
                 <p className="text-slate-600">Zabudowy mroźnicze o potwierdzonej izolacji i wydajnych agregatach.</p>
               </div>
-              <div className="benefit bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="benefit p-6 rounded-xl">
+                <Shield className="w-10 h-10 mb-4 text-blue-500" />
                 <h3 className="font-semibold text-lg mb-3 text-slate-900">Bezpieczeństwo ładunku</h3>
                 <p className="text-slate-600">Rejestracja temperatury i opcje mocowania (listwy, drążek).</p>
               </div>
-              <div className="benefit bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="benefit p-6 rounded-xl">
+                <Settings className="w-10 h-10 mb-4 text-blue-500" />
                 <h3 className="font-semibold text-lg mb-3 text-slate-900">Elastyczne wynajmy</h3>
                 <p className="text-slate-600">Na dni, tygodnie i dłużej – proste warunki.</p>
               </div>
-              <div className="benefit bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="benefit p-6 rounded-xl">
+                <Clock className="w-10 h-10 mb-4 text-blue-500" />
                 <h3 className="font-semibold text-lg mb-3 text-slate-900">Szybki start</h3>
                 <p className="text-slate-600">Podstawienie auta i wsparcie w dokumentach.</p>
               </div>
@@ -80,36 +85,41 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="locations py-16 lg:py-20 bg-white">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-center text-slate-900">
-              Lokalizacje i obszar działania
+        <section className="locations py-16 lg:py-20 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent pointer-events-none"></div>
+          <div className="container mx-auto px-4 max-w-6xl relative">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-center">
+              <span className="gradient-text">Lokalizacje i obszar działania</span>
             </h2>
             <p className="text-lg text-center mb-10 max-w-4xl mx-auto text-slate-600">
               Obsługujemy głównie region Śląska oraz całą Polskę z możliwością szybkiego podstawienia pojazdu.
             </p>
             
             <ul className="locations-list grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <li className="bg-blue-50 p-4 rounded-lg text-center font-medium text-slate-900">
+              <li className="location-card p-4 rounded-lg text-center font-medium text-slate-900">
+                <CheckCircle className="w-6 h-6 mx-auto mb-2 text-blue-500" />
                 Wynajem mroźni Gliwice
               </li>
-              <li className="bg-blue-50 p-4 rounded-lg text-center font-medium text-slate-900">
+              <li className="location-card p-4 rounded-lg text-center font-medium text-slate-900">
+                <CheckCircle className="w-6 h-6 mx-auto mb-2 text-blue-500" />
                 Wynajem mroźni Katowice
               </li>
-              <li className="bg-blue-50 p-4 rounded-lg text-center font-medium text-slate-900">
+              <li className="location-card p-4 rounded-lg text-center font-medium text-slate-900">
+                <CheckCircle className="w-6 h-6 mx-auto mb-2 text-blue-500" />
                 Wynajem mroźni Zabrze
               </li>
-              <li className="bg-blue-50 p-4 rounded-lg text-center font-medium text-slate-900">
+              <li className="location-card p-4 rounded-lg text-center font-medium text-slate-900">
+                <CheckCircle className="w-6 h-6 mx-auto mb-2 text-blue-500" />
                 Wynajem mroźni Śląsk
               </li>
             </ul>
           </div>
         </section>
 
-        <section className="gallery py-16 lg:py-20">
+        <section className="gallery py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-blue-50/30">
           <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center text-slate-900">
-              Nasza flota
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center">
+              <span className="gradient-text">Nasza flota</span>
             </h2>
             
             <div className="gallery-grid grid md:grid-cols-3 gap-6 md:gap-8">
@@ -117,29 +127,30 @@ export default function Home() {
                 <img 
                   src="/images/mroznia_flota.JPG"
                   alt="Wynajem chlodnia mroźnia Śląsk"
-                  className="w-full aspect-video object-cover rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+                  className="w-full aspect-video object-cover"
                 />
               </div>
               <div className="gallery-item">
                 <img 
                   src="/images/mroznia_wnetrze.JPG"
                   alt="Wnętrze zabudowy mroźniczej z izolacją"
-                  className="w-full aspect-video object-cover rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+                  className="w-full aspect-video object-cover"
                 />
               </div>
               <div className="gallery-item">
                 <img 
                   src="/images/mroznia2.JPG"
                   alt="Chlodnia z rejestratorem temperatury wynajem"
-                  className="w-full aspect-video object-cover rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+                  className="w-full aspect-video object-cover"
                 />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="main-cta py-16 lg:py-20 bg-gradient-to-br from-sky-500 to-blue-600 text-white">
-          <div className="container mx-auto px-4 max-w-6xl text-center">
+        <section className="main-cta py-16 lg:py-20 bg-gradient-to-br from-sky-500 via-blue-600 to-purple-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="container mx-auto px-4 max-w-6xl text-center relative">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
               Szybki wynajem auto-mroźni
             </h2>
