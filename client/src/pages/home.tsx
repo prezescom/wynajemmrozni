@@ -1,3 +1,5 @@
+import { trackOutboundClick, trackContactClick } from '@/lib/analytics';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 text-slate-900">
@@ -15,6 +17,12 @@ export default function Home() {
             className="cta-button inline-block bg-white text-blue-600 font-semibold py-4 px-8 rounded-xl hover:bg-gray-50 transition-colors duration-200 text-lg shadow-lg hover:shadow-xl"
             data-testid="button-main-cta"
             aria-label="Sprawdź flotę na iglo-bus.rent"
+            onClick={(e) => {
+              e.preventDefault();
+              trackOutboundClick('https://www.iglo-bus.rent/', 'Sprawdź flotę na iglo-bus.rent', 'Hero', () => {
+                window.location.href = 'https://www.iglo-bus.rent/';
+              });
+            }}
           >
             Sprawdź flotę na iglo-bus.rent
           </a>
@@ -149,6 +157,12 @@ export default function Home() {
               className="cta-button cta-large inline-block bg-white text-blue-600 font-semibold py-5 px-10 rounded-xl hover:bg-gray-50 transition-colors duration-200 text-xl shadow-lg hover:shadow-xl"
               data-testid="button-secondary-cta"
               aria-label="Przejdź do iglo-bus.rent"
+              onClick={(e) => {
+                e.preventDefault();
+                trackOutboundClick('https://www.iglo-bus.rent/', 'Przejdź do iglo-bus.rent', 'Main CTA', () => {
+                  window.location.href = 'https://www.iglo-bus.rent/';
+                });
+              }}
             >
               Przejdź do iglo-bus.rent
             </a>
@@ -167,19 +181,34 @@ export default function Home() {
               {/* Podmień telefon tutaj: */}
               <div>
                 <p className="font-semibold mb-2">Telefon:</p>
-                <a href="tel:+48600000000" className="text-blue-300 hover:text-blue-200 transition-colors">
+                <a href="tel:+48600000000" className="text-blue-300 hover:text-blue-200 transition-colors" onClick={(e) => {
+                  e.preventDefault();
+                  trackContactClick('phone', 'tel:+48600000000', () => {
+                    window.location.href = 'tel:+48600000000';
+                  });
+                }}>
                   +48 600 000 000
                 </a>
               </div>
               <div>
                 <p className="font-semibold mb-2">E-mail:</p>
-                <a href="mailto:kontakt@iglo-bus.rent" className="text-blue-300 hover:text-blue-200 transition-colors">
+                <a href="mailto:kontakt@iglo-bus.rent" className="text-blue-300 hover:text-blue-200 transition-colors" onClick={(e) => {
+                  e.preventDefault();
+                  trackContactClick('email', 'mailto:kontakt@iglo-bus.rent', () => {
+                    window.location.href = 'mailto:kontakt@iglo-bus.rent';
+                  });
+                }}>
                   kontakt@iglo-bus.rent
                 </a>
               </div>
               <div>
                 <p className="font-semibold mb-2">Strona główna:</p>
-                <a href="https://www.iglo-bus.rent/" className="text-blue-300 hover:text-blue-200 transition-colors">
+                <a href="https://www.iglo-bus.rent/" className="text-blue-300 hover:text-blue-200 transition-colors" onClick={(e) => {
+                  e.preventDefault();
+                  trackOutboundClick('https://www.iglo-bus.rent/', 'iglo-bus.rent', 'Footer', () => {
+                    window.location.href = 'https://www.iglo-bus.rent/';
+                  });
+                }}>
                   iglo-bus.rent
                 </a>
               </div>
