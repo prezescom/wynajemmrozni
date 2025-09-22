@@ -129,7 +129,7 @@ export default function Home() {
               </div>
               <div className="gallery-item">
                 <img 
-                  src="/images/rejestrator-dr-203_1758524526262.webp"
+                  src="/images/rejestrator.jpg"
                   alt="Termometr z rejestratorem temperatury"
                   className="w-full aspect-video object-cover rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200"
                 />
