@@ -1,4 +1,5 @@
-import { trackOutboundClick, trackContactClick } from '@/lib/analytics';
+import { Link } from 'wouter';
+import { trackOutboundClick, trackContactClick, trackEvent } from '@/lib/analytics';
 
 export default function Home() {
   return (
@@ -146,20 +147,36 @@ export default function Home() {
               Chcesz szybko wynająć auto-mroźnię? Wejdź na naszą stronę i sprawdź dostępność.
             </p>
             
-            <a 
-              href="https://www.iglo-bus.rent/" 
-              className="cta-button cta-large inline-block bg-white text-blue-600 font-semibold py-5 px-10 rounded-xl hover:bg-gray-50 transition-colors duration-200 text-xl shadow-lg hover:shadow-xl"
-              data-testid="button-secondary-cta"
-              aria-label="Przejdź do iglo-bus.rent"
-              onClick={(e) => {
-                e.preventDefault();
-                trackOutboundClick('https://www.iglo-bus.rent/', 'Przejdź do iglo-bus.rent', 'Main CTA', () => {
-                  window.location.href = 'https://www.iglo-bus.rent/';
-                });
-              }}
-            >
-              Przejdź do iglo-bus.rent
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://www.iglo-bus.rent/" 
+                className="cta-button cta-large inline-block bg-white text-blue-600 font-semibold py-5 px-10 rounded-xl hover:bg-gray-50 transition-colors duration-200 text-xl shadow-lg hover:shadow-xl"
+                data-testid="button-secondary-cta"
+                aria-label="Przejdź do iglo-bus.rent"
+                onClick={(e) => {
+                  e.preventDefault();
+                  trackOutboundClick('https://www.iglo-bus.rent/', 'Przejdź do iglo-bus.rent', 'Main CTA', () => {
+                    window.location.href = 'https://www.iglo-bus.rent/';
+                  });
+                }}
+              >
+                Przejdź do iglo-bus.rent
+              </a>
+              
+              <Link 
+                href="/kontakt" 
+                className="cta-button cta-large inline-block bg-white/10 text-white border border-white/20 font-semibold py-5 px-10 rounded-xl hover:bg-white/20 transition-colors duration-200 text-xl"
+                data-testid="button-contact-cta"
+                onClick={() => {
+                  trackEvent('contact_form_click', {
+                    section: 'Main CTA',
+                    button_text: 'Formularz kontaktowy'
+                  });
+                }}
+              >
+                Formularz kontaktowy
+              </Link>
+            </div>
           </div>
         </section>
       </main>

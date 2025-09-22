@@ -1,4 +1,4 @@
-import { type User, type InsertUser } from "@shared/schema";
+import { type User, type InsertUser, type ContactMessage, type InsertContactMessage } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 // modify the interface with any CRUD methods
@@ -8,13 +8,20 @@ export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
+  
+  // Contact messages
+  createContactMessage(message: InsertContactMessage): Promise<ContactMessage>;
+  getContactMessages(): Promise<ContactMessage[]>;
+  getContactMessage(id: string): Promise<ContactMessage | undefined>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
+  private contactMessages: Map<string, ContactMessage>;
 
   constructor() {
     this.users = new Map();
+    this.contactMessages = new Map();
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -32,6 +39,33 @@ export class MemStorage implements IStorage {
     const user: User = { ...insertUser, id };
     this.users.set(id, user);
     return user;
+  }
+
+  async createContactMessage(insertMessage: InsertContactMessage): Promise<ContactMessage> {
+    const id = randomUUID();
+    const message: ContactMessage = {
+      id,
+      name: insertMessage.name,
+      email: insertMessage.email,
+      phone: insertMessage.phone || null,
+      company: insertMessage.company || null,
+      message: insertMessage.message,
+      rentalDate: insertMessage.rentalDate || null,
+      vehicleType: insertMessage.vehicleType || "Toyota ProAce - Mroźnia",
+      createdAt: new Date(),
+    };
+    this.contactMessages.set(id, message);
+    return message;
+  }
+
+  async getContactMessages(): Promise<ContactMessage[]> {
+    return Array.from(this.contactMessages.values()).sort(
+      (a, b) => b.createdAt.getTime() - a.createdAt.getTime()
+    );
+  }
+
+  async getContactMessage(id: string): Promise<ContactMessage | undefined> {
+    return this.contactMessages.get(id);
   }
 }
 
