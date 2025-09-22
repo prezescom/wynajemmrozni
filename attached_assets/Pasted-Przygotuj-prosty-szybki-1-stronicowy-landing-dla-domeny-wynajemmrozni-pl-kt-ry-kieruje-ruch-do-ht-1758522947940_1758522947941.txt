@@ -1,0 +1,147 @@
+Przygotuj prosty, szybki, 1-stronicowy landing dla domeny wynajemmrozni.pl, który kieruje ruch do https://www.iglo-bus.rent/
+.
+Bez żargonu. Podaj gotowe pliki do wklejenia: index.html i styles.css (osobne bloki kodu).
+Zero frameworków, tylko czysty HTML + CSS. Ma działać idealnie w Lighthouse (SEO/Performance/Accessibility > 90).
+
+Wymagania ogólne
+
+Mobile-first, responsywny, lekki (brak JS jeśli nie jest konieczny).
+
+Struktura treści zgodnie z sekcjami poniżej (z podanymi tekstami po polsku).
+
+Linki CTA wysyłają do: https://www.iglo-bus.rent/.
+
+Użyj kanonicznego linku do iglo-bus.rent (patrz SEO).
+
+Umieść w <head>: title, meta description, meta viewport, theme-color, favicon (może być placeholder), link rel="canonical", Open Graph, Twitter Cards, preload czcionki systemowej nie jest wymagany.
+
+Dodaj schema.org JSON-LD (Organization + WebSite).
+
+Dodaj structured data FAQ (FAQPage) z 3 pytaniami o wynajem mroźni.
+
+Nie kopiuj nic z iglo-bus.rent – treść poniżej jest unikalna.
+
+Kolory i typografia
+
+Tło: bardzo jasny szary (#f8fafc).
+
+Akcent: niebieski (#0ea5e9).
+
+Tekst: ciemny łupkowy (#0f172a).
+
+Użyj systemowych fontów (stack: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial).
+
+Duże, czytelne przyciski CTA, radius 12–16px, wyraźny kontrast.
+
+Sekcje i treści (wstaw dokładnie)
+1) Header / Hero (H1 + CTA)
+
+H1: „Wynajem mroźni samochodowych – Śląsk i cała Polska”
+
+Akapit krótki: „Profesjonalny wynajem aut mroźni i chłodni do –20°C. Flota Toyota ProAce z zabudowami mroźniczymi, rejestratorami temperatury i zasilaniem postojowym 230V.”
+
+CTA (duży przycisk): „Sprawdź flotę na iglo-bus.rent” → link do https://www.iglo-bus.rent/
+
+Mini-lista atutów (ikony jako emoji):
+
+🚚 Szybka dostępność
+
+❄️ Zakres –20°C do +20°C
+
+🧾 Rejestrator temperatur
+
+🔌 Zasilanie 230V (postojowe)
+
+2) Dlaczego my (H2)
+
+Krótki lead + lista 4 punktów (nagłówek + 1 zdanie każdy):
+
+Stabilna temperatura: Zabudowy mroźnicze o potwierdzonej izolacji i wydajnych agregatach.
+
+Bezpieczeństwo ładunku: Rejestracja temperatury i opcje mocowania (listwy, drążek).
+
+Elastyczne wynajmy: Na dni, tygodnie i dłużej – proste warunki.
+
+Szybki start: Podstawienie auta i wsparcie w dokumentach.
+
+3) Lokalizacje / frazy SEO (H2)
+
+Krótki akapit + lista punktowa (exact match – w osobnych <li>):
+
+Wynajem mroźni Gliwice
+
+Wynajem mroźni Katowice
+
+Wynajem mroźni Zabrze
+
+Wynajem mroźni Śląsk
+
+4) Mini-galeria (H2)
+
+Trzy obrazki z alt (użyj placeholderów z opisowym alt, np. /images/mroznie-flota.jpg, /images/mroznie-wnetrze.jpg, /images/mroznie-termometr.jpg).
+Nie osadzaj ciężkich grafik – pokaż kontenery z aspect-ratio i napisy „Obraz floty”, „Wnętrze zabudowy”, „Termometr – kontrola temperatury”.
+
+5) Duży CTA (H2)
+
+Tekst: „Chcesz szybko wynająć auto-mroźnię? Wejdź na naszą stronę i sprawdź dostępność.”
+
+Przycisk: „Przejdź do iglo-bus.rent” → https://www.iglo-bus.rent/
+
+6) Stopka SEO + kontakt
+
+Krótki blok tekstu (ok. 400–600 znaków, nasycony naturalnie frazą „wynajem mroźni samochodowych / aut chłodni”), a pod nim kontakt:
+
+Telefon: +48 600 000 000 (placeholder – zostaw łatwą podmianę w HTML komentarzu)
+
+E-mail: kontakt@iglo-bus.rent
+
+Link: iglo-bus.rent (anchor do https://www.iglo-bus.rent/)
+Dodaj drobny dopisek o obsłudze całej Polski i szybkim podstawieniu.
+
+SEO – head (wstaw dokładnie)
+
+title: Wynajem mroźni samochodowych – Śląsk, Katowice, Gliwice | Iglo-Bus Rent
+
+meta description: Wynajem mroźni samochodowych Toyota ProAce do –20°C. Śląsk (Katowice, Gliwice, Zabrze) i cała Polska. Szybki wynajem aut chłodni. Sprawdź ofertę Iglo-Bus Rent.
+
+canonical: https://www.iglo-bus.rent/
+
+og:title, og:description, og:url, og:type=website, og:image (placeholder /images/og.jpg)
+
+twitter:card=summary_large_image
+
+robots: index,follow
+
+JSON-LD (umieść w <script type="application/ld+json">)
+
+Organization: name „Iglo-Bus Rent”, url „https://www.iglo-bus.rent/”
+, sameAs (pusta tablica), logo (placeholder).
+
+WebSite: name „wynajemmrozni.pl”, url „https://wynajemmrozni.pl/”
+, potentialAction SearchAction (prosty szablon).
+
+FAQPage: 3 pytania/odpowiedzi, np.:
+
+„Jaki jest zakres temperatur?” – „Od –20°C do +20°C, z rejestracją.”
+
+„Czy obsługujecie całą Polskę?” – „Tak, możliwe szybkie podstawienie.”
+
+„Na jak długo można wynająć?” – „Od 1 dnia do wynajmów długoterminowych.”
+
+Dostarcz dwa bloki kodu:
+
+index.html – pełny, gotowy dokument z treścią powyżej (w języku polskim), linkiem do styles.css, metadanymi, JSON-LD, semantyką (header, main, section, footer), a11y (kontrast, aria-label gdzie potrzebne), wysokie Core Web Vitals (lekkość, brak zbędnych fontów i skryptów).
+
+styles.css – czytelny, z komentarzami do szybkiej edycji kolorów/spacingu. Użyj container z max-width ~1100px, siatka/flex w galeriach, przyciski z :hover/:focus.
+
+Na końcu wypisz krótką instrukcję wdrożenia:
+
+Gdzie podmienić telefon i obrazy (komentarze w HTML).
+
+Jak wrzucić na Replit/Netlify/Vercel jako statyczny projekt.
+
+Jak dodać rekord A/ALIAS lub CNAME dla domeny wynajemmrozni.pl na DNS.
+
+Jak dodać stronę do Google Search Console i wskazać kanoniczny na iglo-bus.rent.
+
+Teraz wygeneruj: najpierw index.html, potem styles.css.
