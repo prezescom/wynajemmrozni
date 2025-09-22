@@ -8,15 +8,6 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 text-slate-900">
       <header className="hero bg-gradient-to-br from-sky-500 to-blue-600 text-white py-16 lg:py-24">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-8">
-            <img 
-              src={logoImage} 
-              alt="IGLO-BUS.RENT - Wynajem mroźni samochodowych" 
-              className="mx-auto h-24 md:h-32 lg:h-40 w-auto drop-shadow-2xl"
-              data-testid="img-logo"
-            />
-          </div>
-          
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
             Wynajem mroźni samochodowych – Śląsk i cała Polska
           </h1>
@@ -38,8 +29,20 @@ export default function Home() {
           >
             🚚 Sprawdź flotę i ceny na iglo-bus.rent 🚚
           </a>
+
+          <div className="flex items-center justify-between mt-12 mb-6">
+            <div className="flex-1"></div>
+            <div className="flex-shrink-0">
+              <img 
+                src={logoImage} 
+                alt="IGLO-BUS.RENT - Wynajem mroźni samochodowych" 
+                className="h-20 md:h-24 lg:h-28 w-auto drop-shadow-2xl"
+                data-testid="img-logo"
+              />
+            </div>
+          </div>
           
-          <div className="features-grid grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12">
+          <div className="features-grid grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             <div className="feature glass-effect p-4 rounded-xl">
               <Truck className="feature-icon mx-auto floating-element" />
               <span className="text-sm md:text-base font-medium">Szybka dostępność</span>
