@@ -9,7 +9,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="flex items-center mb-8">
             <img 
-              src="/images/logo-white.png"
+              src="/images/og-home-1200-nocolor-logo.png"
               alt="IGLO-BUS.RENT wynajem mroźni chłodni izoterm"
               className="h-16 md:h-20 mr-6"
             />
