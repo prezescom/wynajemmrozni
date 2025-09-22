@@ -16,7 +16,7 @@ export default function Home() {
           
           <a 
             href="https://www.iglo-bus.rent/" 
-            className="cta-button inline-block bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white font-bold py-6 px-12 rounded-2xl hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-110 animate-pulse border-4 border-white/30"
+            className="cta-button inline-block bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white font-bold py-6 px-12 rounded-2xl hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-110 border-4 border-white/30"
             data-testid="button-main-cta"
             aria-label="Sprawdź flotę na iglo-bus.rent"
             onClick={(e) => {
