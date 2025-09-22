@@ -174,19 +174,20 @@ export default function Home() {
                 Przejdź do iglo-bus.rent
               </a>
               
-              <Link 
-                href="/kontakt" 
+              <a 
+                href="https://www.iglo-bus.rent/kontakt" 
                 className="cta-button cta-large inline-block bg-white/10 text-white border border-white/20 font-semibold py-5 px-10 rounded-xl hover:bg-white/20 transition-colors duration-200 text-xl"
                 data-testid="button-contact-cta"
-                onClick={() => {
-                  trackEvent('contact_form_click', {
-                    section: 'Main CTA',
-                    button_text: 'Formularz kontaktowy'
+                aria-label="Przejdź do formularza kontaktowego"
+                onClick={(e) => {
+                  e.preventDefault();
+                  trackOutboundClick('https://www.iglo-bus.rent/kontakt', 'Formularz kontaktowy', 'Main CTA', () => {
+                    window.location.href = 'https://www.iglo-bus.rent/kontakt';
                   });
                 }}
               >
                 Formularz kontaktowy
-              </Link>
+              </a>
             </div>
           </div>
         </section>
