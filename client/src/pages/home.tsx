@@ -7,9 +7,18 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 text-slate-900">
       <header className="hero bg-gradient-to-br from-sky-500 to-blue-600 text-white py-16 lg:py-24">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            Wynajem mroźni samochodowych – Śląsk i cała Polska
-          </h1>
+          <div className="flex items-center mb-8">
+            <img 
+              src="@assets/2025-09-11 13_39_15-og-home-1200_1758532215179.png"
+              alt="IGLO-BUS.RENT Logo"
+              className="h-16 md:h-20 mr-6"
+            />
+            <div className="flex-1">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                Wynajem mroźni samochodowych – Śląsk i cała Polska
+              </h1>
+            </div>
+          </div>
           <p className="text-lg md:text-xl mb-8 max-w-4xl opacity-95 leading-relaxed">
             Profesjonalny wynajem aut mroźni i chłodni do –20°C. Flota Toyota ProAce z zabudowami mroźniczymi, rejestratorami temperatury i zasilaniem postojowym 230V.
           </p>
