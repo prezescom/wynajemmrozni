@@ -1,7 +1,6 @@
 import { Link } from 'wouter';
 import { trackOutboundClick, trackContactClick, trackEvent } from '@/lib/analytics';
 import { Truck, Snowflake, FileText, Zap, Shield, Settings, Clock, CheckCircle } from 'lucide-react';
-import logoImage from '@assets/2025-09-11 13_39_15-og-home-1200_1758531781783.png';
 
 export default function Home() {
   return (
@@ -29,20 +28,8 @@ export default function Home() {
           >
             🚚 Sprawdź flotę i ceny na iglo-bus.rent 🚚
           </a>
-
-          <div className="flex items-center justify-between mt-12 mb-6">
-            <div className="flex-1"></div>
-            <div className="flex-shrink-0">
-              <img 
-                src={logoImage} 
-                alt="IGLO-BUS.RENT - Wynajem mroźni samochodowych" 
-                className="h-20 md:h-24 lg:h-28 w-auto drop-shadow-2xl"
-                data-testid="img-logo"
-              />
-            </div>
-          </div>
           
-          <div className="features-grid grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="features-grid grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12">
             <div className="feature glass-effect p-4 rounded-xl">
               <Truck className="feature-icon mx-auto floating-element" />
               <span className="text-sm md:text-base font-medium">Szybka dostępność</span>
