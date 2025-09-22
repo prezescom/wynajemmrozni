@@ -113,31 +113,25 @@ export default function Home() {
             
             <div className="gallery-grid grid md:grid-cols-3 gap-6 md:gap-8">
               <div className="gallery-item">
-                <div 
-                  className="image-placeholder bg-gray-200 aspect-video rounded-xl flex items-center justify-center text-slate-600 font-medium shadow-sm"
-                  role="img" 
-                  aria-label="Flota pojazdów mroźniczych Toyota ProAce"
-                >
-                  <span>Obraz floty</span>
-                </div>
+                <img 
+                  src="/images/mroznia_flota.JPG"
+                  alt="Flota pojazdów mroźniczych Toyota ProAce"
+                  className="w-full aspect-video object-cover rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+                />
               </div>
               <div className="gallery-item">
-                <div 
-                  className="image-placeholder bg-gray-200 aspect-video rounded-xl flex items-center justify-center text-slate-600 font-medium shadow-sm"
-                  role="img" 
-                  aria-label="Wnętrze zabudowy mroźniczej z izolacją"
-                >
-                  <span>Wnętrze zabudowy</span>
-                </div>
+                <img 
+                  src="/images/mroznia_wnetrze.JPG"
+                  alt="Wnętrze zabudowy mroźniczej z izolacją"
+                  className="w-full aspect-video object-cover rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+                />
               </div>
               <div className="gallery-item">
-                <div 
-                  className="image-placeholder bg-gray-200 aspect-video rounded-xl flex items-center justify-center text-slate-600 font-medium shadow-sm"
-                  role="img" 
-                  aria-label="Termometr z rejestratorem temperatury"
-                >
-                  <span>Termometr – kontrola temperatury</span>
-                </div>
+                <img 
+                  src="/images/rejestrator-dr-203_1758524526262.webp"
+                  alt="Termometr z rejestratorem temperatury"
+                  className="w-full aspect-video object-cover rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+                />
               </div>
             </div>
           </div>
