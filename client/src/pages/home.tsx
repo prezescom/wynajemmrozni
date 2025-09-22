@@ -11,7 +11,7 @@ export default function Home() {
             <img 
               src="/images/og-home-1200-nocolor-logo.png"
               alt="IGLO-BUS.RENT wynajem mroźni chłodni izoterm"
-              className="h-16 md:h-20 mr-6"
+              className="h-20 md:h-24 lg:h-28 mr-6"
             />
             <div className="flex-1">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
