@@ -16,7 +16,7 @@ export default function Home() {
           
           <a 
             href="https://www.iglo-bus.rent/" 
-            className="cta-button inline-block bg-white text-blue-600 font-semibold py-4 px-8 rounded-xl hover:bg-gray-50 transition-colors duration-200 text-lg shadow-lg hover:shadow-xl"
+            className="cta-button inline-block bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white font-bold py-6 px-12 rounded-2xl hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-110 animate-pulse border-4 border-white/30"
             data-testid="button-main-cta"
             aria-label="Sprawdź flotę na iglo-bus.rent"
             onClick={(e) => {
@@ -26,7 +26,7 @@ export default function Home() {
               });
             }}
           >
-            Sprawdź flotę na iglo-bus.rent
+            🚚 Sprawdź flotę i ceny na iglo-bus.rent 🚚
           </a>
           
           <div className="features-grid grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12">
@@ -204,13 +204,13 @@ export default function Home() {
               {/* Podmień telefon tutaj: */}
               <div>
                 <p className="font-semibold mb-2">Telefon:</p>
-                <a href="tel:+48600000000" className="text-blue-300 hover:text-blue-200 transition-colors" onClick={(e) => {
+                <a href="tel:+48 530 410 504" className="text-blue-300 hover:text-blue-200 transition-colors" onClick={(e) => {
                   e.preventDefault();
-                  trackContactClick('phone', 'tel:+48600000000', () => {
-                    window.location.href = 'tel:+48600000000';
+                  trackContactClick('phone', 'tel:+48530410504', () => {
+                    window.location.href = 'tel:+48530410504';
                   });
                 }}>
-                  +48 600 000 000
+                  +48 530 410 504
                 </a>
               </div>
               <div>
