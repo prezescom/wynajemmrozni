@@ -116,7 +116,7 @@ export default function Home() {
               <div className="gallery-item">
                 <img 
                   src="/images/mroznia_flota.JPG"
-                  alt="Flota pojazdów mroźniczych Toyota ProAce"
+                  alt="Wynajem chlodnia mroźnia Śląsk"
                   className="w-full aspect-video object-cover rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200"
                 />
               </div>
@@ -129,8 +129,8 @@ export default function Home() {
               </div>
               <div className="gallery-item">
                 <img 
-                  src="/images/rejestrator.jpg"
-                  alt="Termometr z rejestratorem temperatury"
+                  src="/images/mroznia2.JPG"
+                  alt="Chlodnia z rejestratorem temperatury wynajem"
                   className="w-full aspect-video object-cover rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200"
                 />
               </div>
